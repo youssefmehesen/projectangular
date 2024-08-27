@@ -1,0 +1,57 @@
+
+<div class="my-card">
+    <div class="item-cover">
+        <img [src]="product.thumbnail" alt>
+        @if(!hideCart){
+        <app-mk-icon class="icon cart" [icon]="'cart'"
+            (click)="addToCart(product)"></app-mk-icon>
+        }
+        @if(!hideFavorite){
+        <app-mk-icon class="icon heart" [icon]="'heart'"
+            (click)="addToWishlist(product)"></app-mk-icon>
+        }
+        @if(!hideTrash){
+        <app-mk-icon class="icon trash" [icon]="'trash'"></app-mk-icon>
+        }
+        @if(newItem){
+        <div class="badge">new</div>
+        }@else{
+        <div class="badge bg-danger">{{(product.discountPercentage).toFixed(1)}}
+            %</div>
+        }
+    </div>
+
+    <div class="cart-info">
+        <div class="title text-truncate ">{{product.title}}</div>
+        <div class="card-details">
+            <span class="price ">$ {{(product.price
+                |discount:product.discountPercentage).toFixed(1) }}</span>
+            @if(!hideOldPrice){
+            <span class="old-price small ">$
+                {{(product.price).toFixed(1)}}</span>
+            }
+            <div
+                class=" flex justify-content-center align-items-center rating">
+                @for (starClass of calculateRating(product.rating); track
+                $index)
+                {
+
+                <i class="bi bi-star-fill"
+                    [ngClass]="starClass"></i>
+                }
+
+                <span
+                    class="small text-secondary">( {{product.reviews.length}}
+                    )</span>
+            </div>
+        </div>
+        @if(!hideColor){
+        <div class="categories">
+            @for (item of product.tags; track $index) {
+            <span class="tagBadge text-black">{{item | titlecase}}</span>
+
+            }
+        </div>
+        }
+    </div>
+</div>

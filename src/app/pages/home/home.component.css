@@ -1,0 +1,63 @@
+.categories{
+    border-right: 1px solid var(--hvr2);
+}
+
+
+.picsum-img-wrapper{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+.carousel:hover{
+    filter: brightness(1.1);
+}
+
+.carousel-caption{
+    color: var(--secondary);
+}
+
+span{
+    visibility: hidden;
+}
+
+.horizontal{
+
+    white-space: nowrap;
+    overflow: auto;
+    
+    
+}
+
+.horizontal  .hr-card{
+    display: inline-block;
+
+
+}
+
+.horizontal::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+.horizontal {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ngb-carousel,ng-template{
+    z-index: auto;
+  }
+
+  .carousel{
+    z-index: 0;
+  }

@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-2">
+        <div class="filters">
+            <input type="range" min="0" max="1000" value="500" />
+            <input type="color" value="#ff0000" />
+            <select class="form-select">
+                <option value>Category</option>
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+            </select>
+            <select class="form-select">
+                <option value>Brand</option>
+                <option value="1">Brand 1</option>
+                <option value="2">Brand 2</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-9">
+        <div class="row my-3 d-flex align-items-center">
+            <div class="col-5 search-result">
+                <p class="my-0">18953 Results for"laptop"</p>
+            </div>
+            <div class="col-7 sort d-flex justify-content-end gap-2">
+                <select class="form-select w-25">
+                    <option value>Sort By</option>
+                    <option value="1">Sort 1</option>
+                    <option value="2">Sort 2</option>
+                </select>
+                <select class="form-select w-25">
+                    <option value>Limit</option>
+                    <option value="10">Limit 10</option>
+                    <option value="20">Limit 20</option>
+                </select>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between search-result-area">
+            @for (item of items; track $index) {
+            <div class="col-4">
+                <app-item-card></app-item-card>
+            </div>
+            }
+
+        </div>
+    </div>
+</div>

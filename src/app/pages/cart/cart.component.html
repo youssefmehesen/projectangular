@@ -1,0 +1,59 @@
+<h2 class="my-5">Cart Items ({{cartItems.length}} items) </h2>
+<table class="table ">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of cartItems; track $index) {
+        <tr>
+            <td class="image-cell">
+                <div class="image-wrapper">
+                    <img [src]="product.thumbnail" width="70px" height="70px"
+                        alt>
+                    <i class="bi bi-x mini-tiny" (click)="callMe()"></i>
+                </div>
+            </td>
+            <td>{{(product.price |
+                discount:product.discountPercentage).toFixed(2)}} $ </td>
+            <td>1</td>
+            <td>800$</td>
+        </tr>
+        }
+        <tr>
+            <!-- app- -->
+        </tr>
+    </tbody>
+</table>
+
+<form action>
+
+    <table class="w-50 table  bill">
+        <tbody>
+            <tr>
+                <td class="service">Subtotal:</td>
+                <td class="price">MKMKs</td>
+            </tr>
+            <tr>
+                <td class="service">Sales Tax:</td>
+                <td class="price">MKMKs</td>
+            </tr>
+            <tr>
+                <td class="service">Copon Code:</td>
+                <td class="price">MKMKs</td>
+            </tr>
+            <tr>
+                <td class="service">Grand Total</td>
+                <td class="price">MKMKs</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <button (submit)="onSubmit($event)">Pay</button>
+
+</form>

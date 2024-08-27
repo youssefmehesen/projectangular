@@ -1,0 +1,42 @@
+<header>
+    <p class="logo" [routerLink]="['/home']">ShopEasy</p>
+    <div class="d-none d-lg-block">
+        <ul class>
+            <li [routerLink]="['/home']">Home</li>
+            <li [routerLink]="['/contact']">Contact</li>
+            <li [routerLink]="['/about']"
+                routerLinkActive="router-link-active">About</li>
+            <li (click)=signUpPopUp.openOTP()>Sign Up</li>
+        </ul>
+    </div>
+    <app-otp-form #signUpPopUp></app-otp-form>
+
+    <div class="header-right">
+        <div class="input-group search-bar">
+            <input
+                type="text"
+                class="form-control expand-search"
+                name="searchTxt"
+                (input)="searching($event)">
+            <span class="input-group-text"><i
+                    class="bi bi-search"></i></span>
+        </div>
+        <div class="favorite" [routerLink]="['wishlist']">
+            <i class="bi bi-heart"></i>
+            <span class="mini-tiny small"><p>{{favoriteItems}}</p> </span>
+        </div>
+        <div class="account" [routerLink]="['cart']">
+            <i class="bi bi-bag"></i>
+            <span class="mini-tiny small"><p>{{cartItems}}</p> </span>
+        </div>
+        <div [routerLink]="['account']">
+            <i class="bi bi-person"></i>
+        </div>
+
+        <div class="collapse-menu">
+            <i class="bi bi-list"></i>
+        </div>
+
+    </div>
+</header>
+

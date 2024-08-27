@@ -1,0 +1,28 @@
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.about-left{
+    display: flex;
+    place-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 10%;
+    padding-right: auto;
+   
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* color: var(--gray); */
+    letter-spacing: 1.2px;
+}

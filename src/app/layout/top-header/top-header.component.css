@@ -1,0 +1,42 @@
+header{
+    height: 2rem;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+select{
+    position: absolute;
+    right: 6%;
+    border: 0;
+    padding: 5px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: inherit;
+    
+}
+
+
+p{
+    text-transform: capitalize;
+}
+
+
+
+a{
+    color: var(--white);
+    margin-left: 10px;
+    font-weight: 800;
+
+}
+span{
+text-transform: uppercase;
+}
+p{
+    color: var(--white);
+}
+.form-select{
+    width: 7%;
+}

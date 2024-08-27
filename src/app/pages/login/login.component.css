@@ -1,0 +1,31 @@
+.img-wrapper{
+    width: 100%;
+    height: auto;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+
+.signup-right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    align-items: center;
+    height: 100v;
+
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
+p{
+    font-size: 15px;
+    font-weight: 600;
+}

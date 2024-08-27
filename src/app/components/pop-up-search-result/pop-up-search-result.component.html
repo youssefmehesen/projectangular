@@ -1,0 +1,18 @@
+@if(searchText){
+
+<div class="pop-up">
+    <div class="search-details">
+        <p>{{itemResult.length}} items found</p>
+        <app-mk-btn [btnText]="'Show More'"></app-mk-btn>
+    </div>
+    <div class="search-wrapper">
+
+    @for (item of itemResult; track $index) {
+    <div class="search-item">
+        <img [src]="item.thumbnail" alt>
+        <p class="text-truncate  my-1">{{item.title}}</p>
+    </div>
+    }
+</div>
+</div>
+}

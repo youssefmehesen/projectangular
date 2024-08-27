@@ -1,0 +1,23 @@
+<div class="row my-5">
+    <div class="col-6">
+        <div class="img-wrapper">
+            <img [src]=signup alt>
+        </div>
+    </div>
+    <div class="col-6 d-flex justify-content-start align-items-center">
+        <div class="signup-right">
+
+            <h2>Create an account</h2>
+            <p>Enter your details</p>
+
+            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" placeholder="Phone Number">
+            <input type="Password" class="form-control" placeholder="Password">
+
+            <app-mk-btn [btnText]="'Join Us'"></app-mk-btn>
+            <p>Already have an account? <a [routerLink]="['/login']"
+                    routerLinkActive="router-link-active">Log in</a></p>
+
+        </div>
+    </div>
+</div>

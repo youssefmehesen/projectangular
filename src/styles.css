@@ -1,0 +1,234 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+/* Order */
+@layer reset, primeng;
+/* Reset CSS */
+
+@layer reset {
+    button,
+    input {
+        /* CSS to Reset */
+    }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root{
+    --black : #000000;
+    --bg : #ffffff;
+    --gray :#ad51518e;
+    --secondary: #db4444;
+    --green : #00FF66;
+    --hvr1 : #e07575;
+    --hvr2 : #a0bce0;
+    --white :#f5f5f5 ; 
+    --gold :#ffbf00 ; 
+
+}
+
+body{
+    background-color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden ;
+    font-size: 16px;
+height: 100%;
+display: flex;
+flex-direction: column;    
+}
+
+header,footer{
+    padding: 0.5% 6%;
+    align-items: center;
+}
+
+select,
+option {
+    outline: none;
+    border: 0;
+}
+
+p,a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color:var(--black);
+}
+.strong{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.xstrong{
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+}
+.card{
+    background-color: var(--bg);
+}
+.small{
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.addClickStyle{
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+h3{
+    color: var(--secondary);
+    position: relative;
+}
+h3::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 10px;
+    height: 30px;
+    border-radius: 3px;
+    border-left: 10px solid var(--secondary);
+    color: #000000;
+
+}   
+
+.mini-tiny{  
+    position: absolute;
+    top:-10px ;
+    left: -10px;
+    border-radius: 50px ;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary);}
+
+
+    .cover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9); /* Transparent background */
+        filter: opacity(0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000; /* Ensure it's above the normal content */
+        overflow-y: none;
+    }
+    
+
+@media  (max-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+    p,a,li{
+        font-size: 0.75rem;
+    }
+    header,footer{
+        padding: 10px 15px;
+    }
+    .container{
+        padding: 0 10px;
+    }
+}
+
+
+
+@media  (max-width: 600px) {
+    body{
+        font-size: 13px;
+    }
+    p,a,li{
+        font-size: 0.7rem;
+    }
+    header,footer{
+        padding: 8px 10px;
+    }
+    .container{
+        padding: 0 5px;
+    }
+
+    button{
+        padding: 8px 12px;
+        font-style: 0.9rem;
+    }
+}
+
+
+/* Smaller mobile devices (480px and below) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    p,a,li{
+        font-size: 0.65rem;
+    }
+
+    /* Small screen adjustments */
+    header, footer {
+        padding: 5px 8px;
+    }
+
+    .container {
+        padding: 0 3px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* Adjust navigation elements or icons for small screens */
+    nav {
+        font-size: 0.8rem;
+    }
+
+    /* Adjust images to fit small screens */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Ultra small screens (320px and below) */
+@media (max-width: 320px) {
+    body {
+        font-size: 11px;
+    }
+
+    p,a,li {
+        font-size: 0.6rem;
+    }
+
+    header, footer {
+        padding: 3px 5px;
+    }
+
+    button {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+
+    nav {
+        font-size: 0.75rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+

@@ -1,0 +1,74 @@
+
+@if(otpWindow){
+<div class="cover" (click)="close()">
+    <div class="pop-up" (click)="$event.stopPropagation()">
+        <h1>Enter Your Email</h1>
+        <input class="form-control" type="email" #emailInput>
+        <app-mk-btn [btnText]="'Generate OTP'"
+            (click)="verifyOTP()"></app-mk-btn>
+        <div class="exit" (click)="close()">
+            <i class="bi bi-x exit"></i>
+        </div>
+    </div>
+
+</div>
+}
+@else if(verify){
+<div class="cover" (click)="close()">
+
+    <div class="pop-up" (click)="$event.stopPropagation()">
+        <h1>Verify your email</h1>
+        <p>OTP has been sent to {{email}}</p>
+        <input type="number" class="form-control" />
+        <app-mk-btn [btnText]="'Sign Up'" (click)="closePopUp()"
+            [routerLink]="['/signup']"
+            routerLinkActive="router-link-active"></app-mk-btn>
+        <div class="exit" (click)="close()">
+            <i class="bi bi-x exit"></i>
+        </div> </div>
+</div>
+}
+
+<!--   5 Ways to send data to component -->
+<!-- Reference Variable #Input  
+ {{
+
+ <input class="form-control" type="email" #emailInput>
+        <app-mk-btn [btnText]="'Generate OTP'"
+            (click)="verifyOTP(emailInput)"></app-mk-btn>
+
+              verifyOTP(email) {
+    console.log(email.value);
+
+    this.otpWindow = true;
+    // this.verify = true;
+  }
+
+ }}
+
+
+        NgModule 2 way binding 
+
+
+              <input class="form-control" type="email" [(ngModel)]="email">
+        <app-mk-btn [btnText]="'Generate OTP'"
+            (click)="verifyOTP()"></app-mk-btn>
+
+
+
+        Froms
+        
+        
+        @viewChild
+
+          @ViewChild('emailInput') emailInput: ElementRef;
+  verifyOTP() {
+    console.log(this.emailInput.nativeElement.value);
+
+
+
+
+     (input)
+
+
+    -->

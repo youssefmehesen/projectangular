@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    @for (controlName of fields; track $index) {
+
+    @if(controlName.name != 'message'){
+    <!-- <div class="col-3"> -->
+    <div class="form-group">
+        <label for>{{controlName.name | titlecase }}</label>
+        <input type="text" class="form-control"
+            [formControlName]="controlName.name">
+    </div>
+    }@else{
+    <div class="form-group">
+        <label for>{{controlName.name | titlecase }}</label>
+        <textarea class="form-control"
+            [formControlName]="controlName.name"></textarea>
+    </div>
+    }
+    }
+    <div class="my-4 d-flex justify-content-end">
+        <app-mk-btn [btnText]="'Submit'" disabled
+            type="submit"></app-mk-btn>
+
+    </div>
+</form>

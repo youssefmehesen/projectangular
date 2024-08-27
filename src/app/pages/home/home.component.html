@@ -1,0 +1,106 @@
+<app-pop-up-search-result></app-pop-up-search-result>
+
+<div class="row d-flex align-items-center">
+    <div class="col-3 categories">
+        <h3 class="my-3"><span>_</span>Categories</h3>
+        <ul>
+            @for (item of categories; track $index) {
+            <li class="text-capitalize my-2">{{item}}</li>
+            }
+        </ul>
+    </div>
+    <div class="col-9">
+
+        <div class="carousel">
+            @if (covers) {
+            <ngb-carousel [showNavigationArrows]="showNavigationArrows"
+                [showNavigationIndicators]="showNavigationIndicators">
+                @for (image of covers; track $index) {
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="image" alt="Random slide" />
+                    </div>
+
+                </ng-template>
+                }
+            </ngb-carousel>
+            }
+        </div>
+
+    </div>
+</div>
+
+<div class="row my-4">
+    <h3><span>_</span>Today's</h3>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="xstrong"> NEW LAPTOPS</h1>
+        <div class="scroll d-flex gap-2">
+            <div class="bg-danger">
+                <i class="bi bi-caret-left"></i>
+            </div>
+            <div class="bg-danger">
+                <i class="bi bi-caret-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="horizontal">
+        @for (product of highProducts; track $index) {
+        <div class=" col-md-3 col-4  hr-card">
+            <app-item-card [hideTrash]=true [product]="product"
+                [newItem]=true></app-item-card>
+        </div>
+
+        }
+    </div>
+    <div class="d-flex justify-content-center align-items-center my-4 ">
+        <app-mk-btn [btnText]="'View all products'"></app-mk-btn>
+    </div>
+</div>
+
+<div class="row my-4">
+    <h3><span>_</span>Categories</h3>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="xstrong"> Browse By Category</h1>
+    </div>
+    <div class="horizontal ">
+        @for (item of highProducts; track $index) {
+        <div class=" col-md-2  hr-card">
+            <app-category-card></app-category-card>
+        </div>
+
+        }
+    </div>
+    <div class="d-flex justify-content-center align-items-center my-4 ">
+        <app-mk-btn [btnText]="'View all products'"></app-mk-btn>
+    </div>
+</div>
+
+<div class="row my-4">
+    <h3><span>_</span>This Month</h3>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="xstrong"> Flash Sales</h1>
+        <app-mk-btn [btnText]="'View All'"></app-mk-btn>
+    </div>
+    <div class="horizontal">
+        @for (product of monthSales; track $index) {
+        <div class=" col-md-3 col-4  hr-card">
+            <app-item-card [hideTrash]=true [hideOldPrice]=true
+                [product]="product"></app-item-card>
+        </div>
+
+        }
+    </div>
+
+</div>
+
+<div class="my-5">
+    <img [src]=ad alt>
+</div>
+
+<div class="row d-flex justify-content-around m-5">
+    @for(item of services;track $index){
+    <div class="col-3 ">
+        <app-service-card [service]="item"></app-service-card>
+    </div>
+    }
+</div>

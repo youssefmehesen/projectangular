@@ -1,0 +1,21 @@
+
+
+<div class="row my-4">
+    <h3><span>_
+
+        </span>Your Wishlist</h3>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="xstrong">Got It As Soon As Possible </h1>
+
+    </div>
+    <div class="d-flex flex-wrap">
+        @for (product of myWishlist; track $index) {
+        <div class=" col-md-3 col-4 my-4 ">
+            <app-item-card class [hideColor]=true
+                [hideOldPrice]=true
+                [hideFavorite]= true
+                [product]=product></app-item-card>
+        </div>
+
+        }
+    </div>

@@ -1,0 +1,9 @@
+button{
+    background-color: var(--secondary);
+    border: 0;
+    width: fit-content;
+    padding: 5px 15px;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 3px;
+}

@@ -1,0 +1,15 @@
+i{
+    font-size: 5rem;
+    font-weight: 10;
+    color: var(--gray);
+}
+
+.category-wrapper{
+    border: 2px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+

@@ -1,0 +1,54 @@
+.bill{
+    width: fit-content;
+    transform: translateX(100%);
+}
+
+.service{
+    width: 50%;font-style: 3rem;
+    font-weight: 900;
+}
+
+button{
+    margin-top: 20px;
+    border : 0;
+    border-radius: 15px ;
+    width: 50%;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 10px ;
+    transform: translate(50%);
+
+}
+h2{
+display: flex;
+justify-content: center;
+text-transform: uppercase;
+font-style: 3rem;
+font-weight: 900;
+}
+
+.image-cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table *{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+.account{
+    position: relative;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,9 @@
+.profile-picture{
+    width: 100%;
+}
+
+
+.profile-picture i{
+    font-size: 8rem;
+    margin-bottom: 10px;
+}

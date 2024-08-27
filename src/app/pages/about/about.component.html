@@ -1,0 +1,38 @@
+<div class="row my-3">
+    <div class="col-6 about-left">
+        <h1>Our Story</h1>
+        <p>Hello World, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Odio deleniti optio vero dolorem iste assumenda vel similique facere
+            illo laborum. Blanditiis dolorem, ullam facilis quos nobi Odio
+            deleniti optio vero dolorem iste assumenda vel similique facere
+            illo laborum. Blanditiis dolorem, ullam facilis quos nobis
+            repudiandae ducimus. Aspernatur, ducimus?</p>
+    </div>
+    <div class="col-6">
+        <img [src]=aboutImg alt>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-around m-5">
+    @for(item of dashboard;track $index){
+    <div class="col-3">
+        <app-service-card [service]="item"></app-service-card>
+    </div>
+    }
+</div>
+
+<div class="row d-flex justify-content-center ">
+    <!-- @for (item of items; track $index) {} -->
+    <div class="col-3">
+        <app-developer-card></app-developer-card>
+    </div>
+
+</div>
+
+<div class="row d-flex justify-content-around m-5">
+    @for(item of services;track $index){
+    <div class="col-3 ">
+        <app-service-card [service]="item"></app-service-card>
+    </div>
+    }
+</div>
